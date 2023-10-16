@@ -37,7 +37,9 @@ int handle_print(const char *fmt, int *ind, va_list list, char buffer[],
 		else if (width)
 		{
 			--(*ind);
-			while (isdigit(fmt[*ind]))
+			while (fmt[*ind] != ' ' && fmt[*ind] != '%')
+				--(*ind);
+			if (fmt[*ind] == ' ')
 				--(*ind);
 			return (1);
 		}
