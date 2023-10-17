@@ -1,12 +1,15 @@
 #include "main.h"
 
+
 /**
- * get_flags - Calculates active flags
- * @format: Formatted string in which to print the arguments
- * @i: take a parameter.
- *
- * Return: Flags:
- */
+* get_flags - Extracts and calculates active formatting flags.
+*
+* @format: The formatted string in which to analyze formatting flags.
+* @i: Pointer to the current index in the format string.
+*
+* Return: The calculated flags.
+*/
+
 int get_flags(const char *format, int *i)
 {
 	/* - + 0 # ' ' */
